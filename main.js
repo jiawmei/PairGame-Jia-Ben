@@ -9,8 +9,8 @@ characters = [
   ll l l
   ll l l
   llllll
-   l  l
-   l  l
+   c  c
+   c  c
       `,
     `
   llllll
@@ -21,11 +21,27 @@ characters = [
       `,
 ];
 
-options = {};
+const gamesize = {
+  WIDTH: 125,
+  HEIGHT: 150
+};
+
+options = {
+  viewSize: {x:gamesize.WIDTH, y:gamesize.HEIGHT}
+};
+
+let player;
 
 function update() {
   if (!ticks) {
+    player = {
+      pos:vec(25, gamesize.HEIGHT * 0.9)
+    };
   }
+
+  color("black");
+  char("a", player.pos);
 }
+
 
 addEventListener("load", onLoad);
