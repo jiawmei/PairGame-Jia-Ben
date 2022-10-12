@@ -38,7 +38,7 @@ const gamesize = {
 
 options = {
   viewSize: {x:gamesize.WIDTH, y:gamesize.HEIGHT},
-  theme: "dark",
+  theme: "crt",
   seed:69,
   isPlayingBgm: true
 };
@@ -109,7 +109,7 @@ function update() {
   }
   if (friendly.length === 0) {
     currFriendlySpeed = rnd(1, 1.1) * difficulty;
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < 2; i++) {
         // const posX = rnd(0, G.WIDTH);
         const posX = rnd(gamesize.WIDTH, 150);
         const posY = rnd(12.5, 45);
